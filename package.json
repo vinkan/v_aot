@@ -1,15 +1,11 @@
 {
   "name": "v_aot",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "An output tool",
   "main": "src/main.js",
-  "type": "module",
   "scripts": {
-    "build": "rimraf output && rollup -c rollup.config.mjs"
+    "build": "rimraf output && rollup -c"
   },
-  "files": [
-    "output"
-  ],
   "author": "vinca",
   "license": "ISC",
   "devDependencies": {
