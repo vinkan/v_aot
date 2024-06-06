@@ -1,11 +1,21 @@
 {
   "name": "v_aot",
-  "version": "0.0.3",
+  "version": "0.0.5",
   "description": "An output tool",
   "main": "src/main.js",
   "scripts": {
     "build": "rimraf output && rollup -c"
   },
+  "exports": {
+    ".": {
+      "require": "./output/bundle.umd.js",
+      "import": "./output/bundle.umd.js"
+    },
+    "./output/bundle.umd.js": "./output/bundle.umd.js"
+  },
+  "files": [
+    "output/*"
+  ],
   "author": "vinca",
   "license": "ISC",
   "devDependencies": {

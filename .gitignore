@@ -1,8 +1,11 @@
-rollup.config.mjs
+// catalog 
 node_modules
-package-lock.json
-.gitignore
-.npmignore
 test
 src
 output
+
+// files
+rollup.config.mjs
+package-lock.json
+.gitignore
+.npmignore

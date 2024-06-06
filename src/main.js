@@ -1,6 +1,3 @@
-// 引入所需
-import { version } from '../package.json';
-
 // 定义类型
 const TYPE_DESC = [
     { '字符串': '%s' },
