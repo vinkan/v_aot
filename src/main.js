@@ -6,6 +6,7 @@ const TYPE_DESC = [
     { '对象': '%o' },
     { 'CSS 样式': '%c' }
 ]
+// 定义颜色
 const typeColor = (type = "default") => {
     let color = "";
     switch (type) {
@@ -34,6 +35,9 @@ const typeColor = (type = "default") => {
 let v_aot = {}
 
 // 定义方法
+v_aot.log = (message) => {
+    console.log(message);
+}
 v_aot.txt = (label, value, type = "default") => {
     console.log(`${label}%c${value}`, `color: ${typeColor(type)};`);
 }
@@ -45,6 +49,37 @@ v_aot.capsule = (title, info, type = "default") => {
         "background:transparent"
     );
 };
+
+// 将图片转换为 Base64 编码
+function getImageAsBase64(url, callback) {
+    const xhr = new XMLHttpRequest();
+    xhr.onload = function () {
+        const reader = new FileReader();
+        reader.onloadend = function () {
+            callback(reader.result);
+        };
+        reader.readAsDataURL(xhr.response);
+    };
+    xhr.open('GET', url);
+    xhr.responseType = 'blob';
+    xhr.send();
+}
+v_aot.pa = async (url) => {
+    await new Promise((resolve, reject) => {
+        try {
+            getImageAsBase64(url, (base64String) => {
+                console.log('%c ', `padding: 100px 200px;background: url(${base64String}) no-repeat; background-size: contain;font-size:130px;line-height: 50px;`);
+                resolve({
+                    code: 200,
+                    success: true,
+                    message: 'The base64 is generated successfully.'
+                })
+            })
+        } catch (error) {
+            reject(toJson(error));
+        }
+    })
+}
 
 
 export default v_aot

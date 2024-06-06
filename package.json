@@ -8,10 +8,10 @@
   },
   "exports": {
     ".": {
-      "require": "./output/bundle.umd.js",
-      "import": "./output/bundle.umd.js"
+      "require": "./output/bundle.min.js",
+      "import": "./output/bundle.min.js"
     },
-    "./output/bundle.umd.js": "./output/bundle.umd.js"
+    "./output/bundle.min.js": "./output/bundle.min.js"
   },
   "files": [
     "output/*"

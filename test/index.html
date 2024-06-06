@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>测试用例</title>
+    <script src="https://unpkg.com/v_aot"></script>
+</head>
+<body>
+    测试用例
+    <script>
+        window.onload = function() {
+            v_aot.txt('当前版本号','0.0.1');
+            v_aot.txt('当前版本号','0.0.1', `primary`);
+            v_aot.txt('当前版本号','0.0.1', `success`);
+            v_aot.txt('当前版本号','0.0.1', `warning`);
+            v_aot.txt('当前版本号','0.0.1', `danger`);
+            v_aot.capsule("😼 vinca wrote the nuxt3 project", `v1.0.0 release`);
+            v_aot.capsule("😼 vinca wrote the nuxt3 project", `v1.0.0 release`, `primary`);
+            v_aot.capsule("😼 vinca wrote the nuxt3 project", `v1.0.0 release`, `success`);
+            v_aot.capsule("😼 vinca wrote the nuxt3 project", `v1.0.0 release`, `warning`);
+            v_aot.capsule("😼 vinca wrote the nuxt3 project", `v1.0.0 release`, `danger`);
+        }
+    </script>
+</body>
+</html>
