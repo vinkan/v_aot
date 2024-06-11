@@ -4,11 +4,11 @@ import pkg from './package.json' assert { type: 'json' };
 const config = {
     input: 'src/main.js',
     output: [
-        {
-            file: 'output/bundle.js',
-            format: 'es',
-            name: 'v_aot'
-        },
+        // {
+        //     file: 'output/bundle.js',
+        //     format: 'es',
+        //     name: 'v_aot'
+        // },
         {
             file: 'output/bundle.min.js',
             format: 'es',

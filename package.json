@@ -1,11 +1,15 @@
 {
   "name": "v_aot",
-  "version": "0.0.5",
+  "version": "1.0.1",
   "description": "An output tool",
   "main": "src/main.js",
   "scripts": {
     "build": "rimraf output && rollup -c"
   },
+  "keywords": [
+    "console",
+    "vue"
+  ],
   "exports": {
     ".": {
       "require": "./output/bundle.min.js",
